@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'RocknRoll One', sans-serif;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+input[type='radio'] {
+  display: none;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('./img/bg-1.jpg'); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.choose-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
+}
+
+.choose-card {
+  display: flex;
+  gap: 20px;
+}
+
+.choose-label-card {
+  position: relative;
+}
+
+.choose-label-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 96px;
+  height: 20px;
+  box-shadow: 2px 2px 5px rgb(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+.choose-label-card-small {
+  width: 96px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.choose-label-difficulty {
+  padding: 5px 6px;
+  box-shadow: 2px 2px 5px rgb(0, 0, 0, 0.3);
+  font-size: 20px;
+}
+
+.choose-label:not(:last-child) {
+  margin-right: 15px;
+}
+
+.choose-radio:checked + .choose-label-card:before {
+  background-color: #eee;
+}
+
+.choose-radio:checked + .choose-label-difficulty {
+  background-color: #eee;
+}
+
+.choose-img {
+  width: 96px;
+  height: 96px;
+}
+
+.choose-img-small {
+  width: 48px;
+  height: 48px;
+}
+
+.btn {
+  border: 2px solid cadetblue;
+  padding: 5px 10px;
+  border-radius: 5px;
+  position: relative;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: cadetblue;
+  color: white;
+}
+
+.btn:active {
+  top: 5px;
+}
+
+.game-container {
+  display: none;
+  color: white;
+}
+
+.game {
+  width: 800px;
+}
+
+.score {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.score-user,
+.score-computer {
+  color: lightgoldenrodyellow;
+}
+
+.card {
+  width: 80px;
+  height: 120px;
+  position: relative;
+  float: left;
+  margin: 10px;
+  transition: transform 1s;
+  /* 設定子元素在 3D 空間內  */
+  transform-style: preserve-3d;
+}
+
+.card-front {
+  background: white;
+  background-image: url('./img/chess-1.png');
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  border: 2px solid black;
+  border-radius: 20px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* 設定背面隱藏 */
+  backface-visibility: hidden;
+}
+
+.card-back {
+  background: black;
+  /* background-image: url('./img/card-bg-1.svg'); */
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: rotateY(180deg);
+  border: 2px solid white;
+  border-radius: 20px;
+  /* 設定背面隱藏 */
+  backface-visibility: hidden;
+}
+
+.card-close {
+  transform: rotateY(180deg);
+}

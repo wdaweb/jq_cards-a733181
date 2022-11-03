@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>memory game</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="choose-container">
+        <form class="choose-form">
+          <div class="choose-card">
+            <input
+              type="radio"
+              name="card"
+              value="0"
+              id="card1"
+              checked
+              class="choose-radio"
+            />
+            <label for="card1" class="choose-label-card">
+              <img src="./src/img/chess-1.png" alt="chess" class="choose-img" />
+            </label>
+            <input
+              type="radio"
+              name="card"
+              value="1"
+              id="card2"
+              class="choose-radio"
+            />
+            <label for="card2" class="choose-label-card">
+              <img
+                src="./src/img/animal-2.svg"
+                alt="animal"
+                class="choose-img"
+              />
+            </label>
+            <input
+              type="radio"
+              name="card"
+              value="2"
+              id="card3"
+              class="choose-radio"
+            />
+            <label for="card3" class="choose-label-card">
+              <img src="./src/img/fruit-1.png" alt="fruit" class="choose-img" />
+            </label>
+            <input
+              type="radio"
+              name="card"
+              value="3"
+              id="card4"
+              class="choose-radio"
+            />
+            <label for="card4" class="choose-label-card">
+              <img
+                src="./src/img/transportation-3.svg"
+                alt="transportation"
+                class="choose-img"
+              />
+            </label>
+            <input
+              type="radio"
+              name="card"
+              value="4"
+              id="card5"
+              class="choose-radio"
+            />
+            <label
+              for="card5"
+              class="choose-label-card choose-label-card-small"
+            >
+              <img
+                src="./src/img/chess-1.png"
+                alt="chess"
+                class="choose-img-small"
+              />
+              <img
+                src="./src/img/animal-2.svg"
+                alt="animal"
+                class="choose-img-small"
+              />
+              <img
+                src="./src/img/fruit-1.png"
+                alt="fruit"
+                class="choose-img-small"
+              />
+              <img
+                src="./src/img/transportation-3.svg"
+                alt="transportation"
+                class="choose-img-small"
+              />
+            </label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              name="difficulty"
+              value="0"
+              id="easy"
+              class="choose-radio"
+            />
+            <label for="easy" class="choose-label-difficulty">簡單</label>
+            <input
+              type="radio"
+              name="difficulty"
+              value="1"
+              id="medium"
+              checked
+              class="choose-radio"
+            />
+            <label for="medium" class="choose-label-difficulty">中等</label>
+            <input
+              type="radio"
+              name="difficulty"
+              value="2"
+              id="hard"
+              class="choose-radio"
+            />
+            <label for="hard" class="choose-label-difficulty">困難</label>
+          </div>
+          <button type="submit" class="btn">確定</button>
+        </form>
+      </div>
+      <div class="game-container">
+        <h2 class="score">玩家分數：<span class="score-user">0</span></h2>
+        <h2 class="score">電腦分數：<span class="score-computer">0</span></h2>
+
+        <div class="game">
+          <!-- <button type="button" class="card">
+        <span class="card-front"></span>
+        <span class="card-back"></span>
+        </button> -->
+        </div>
+      </div>
+    </div>
+    <script src="./src/sweetalert2@11.js"></script>
+    <script src="./src/jquery-3.6.1.min.js"></script>
+    <script src="./src/index.js"></script>
+  </body>
+</html>
